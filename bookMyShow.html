@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow Clone</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color:#f5f5f5;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            height:64px;
+            background-color:white;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:0 50px;
+        }
+
+        .nav-left{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .logo span{
+            color:red;
+        }
+
+        .search{
+            width:550px;
+            height:38px;
+
+            border:1px solid lightgray;
+            border-radius:5px;
+
+            padding-left:15px;
+        }
+
+        .nav-right{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .city{
+            font-size:14px;
+        }
+
+        .signin{
+            background-color:#f84464;
+            color:white;
+
+            border:none;
+            border-radius:5px;
+
+            padding:8px 18px;
+        }
+
+        .menu{
+            font-size:24px;
+        }
+
+        /* MENU BAR */
+
+        .menu-bar{
+            height:40px;
+            background-color:white;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:0 50px;
+        }
+
+        .menu-left{
+            display:flex;
+            gap:25px;
+        }
+
+        .menu-right{
+            display:flex;
+            gap:20px;
+        }
+
+        .menu-item{
+            font-size:14px;
+        }
+
+        /* BANNER */
+
+        .banner{
+            margin:20px auto;
+            width:95%;
+            height:280px;
+
+            border-radius:12px;
+
+            background:linear-gradient(to right,#0926a5,#07156c);
+
+            color:white;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:40px 60px;
+        }
+
+        .banner-content{
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+
+        .cashback{
+            font-size:72px;
+            font-style:italic;
+        }
+
+        .offer{
+            font-size:28px;
+        }
+
+        .apply-btn{
+            width:160px;
+            height:50px;
+
+            border:none;
+            border-radius:30px;
+
+            background:orange;
+            color:white;
+            font-size:18px;
+        }
+
+        .card-image{
+            width:250px;
+            height:250px;
+
+            background-color:#111;
+            border-radius:20px;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            font-size:28px;
+        }
+
+        /* MOVIES HEADING */
+
+        .heading-row{
+            width:92%;
+            margin:auto;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .heading{
+            font-size:34px;
+            font-weight:bold;
+        }
+
+        .see-all{
+            color:#f84464;
+        }
+
+        /* MOVIES */
+
+        .movies{
+            width:92%;
+            margin:20px auto;
+
+            display:grid;
+            grid-template-columns:repeat(5,1fr);
+            gap:25px;
+        }
+
+        .movie-card{
+            background-color:white;
+            border-radius:10px;
+        }
+
+        .poster{
+            height:330px;
+            border-radius:10px;
+
+            background-color:#202020;
+            color:white;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            font-size:24px;
+        }
+
+        .rating{
+            background-color:black;
+            color:white;
+
+            padding:10px;
+            border-radius:0 0 10px 10px;
+            margin-top:-10px;
+            position:relative;
+            z-index:2;
+        }
+
+        .movie-name{
+            margin-top:12px;
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .genre{
+            margin-top:8px;
+            color:gray;
+            font-size:18px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="navbar">
+
+        <div class="nav-left">
+
+            <div class="logo">
+                book<span>my</span>show
+            </div>
+
+            <input
+                type="text"
+                class="search"
+                placeholder="Search for Movies, Events, Plays, Sports and Activities"
+            >
+
+        </div>
+
+        <div class="nav-right">
+
+            <div class="city">Nadiad ▼</div>
+
+            <button class="signin">
+                Sign In
+            </button>
+
+            <div class="menu">
+                ☰
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="menu-bar">
+
+        <div class="menu-left">
+
+            <div class="menu-item">Movies</div>
+            <div class="menu-item">Stream</div>
+            <div class="menu-item">Events</div>
+            <div class="menu-item">Plays</div>
+            <div class="menu-item">Sports</div>
+            <div class="menu-item">Activities</div>
+
+        </div>
+
+        <div class="menu-right">
+
+            <div class="menu-item">ListYourShow</div>
+            <div class="menu-item">Corporates</div>
+            <div class="menu-item">Offers</div>
+            <div class="menu-item">Gift Cards</div>
+
+        </div>
+
+    </div>
+
+    <div class="banner">
+
+        <div class="banner-content">
+
+            <div class="offer">
+                Flat
+            </div>
+
+            <div class="cashback">
+                5% Cashback
+            </div>
+
+            <div>
+                Get extra cashback of ₹100 on your first
+                BookMyShow payment.
+            </div>
+
+            <button class="apply-btn">
+                Apply Now
+            </button>
+
+        </div>
+
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1542385151-efd9000785a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&h=250&q=80'); background-size: cover; background-position: center;">
+        </div>
+
+    </div>
+
+    <div class="heading-row">
+
+        <div class="heading">
+            Recommended Movies
+        </div>
+
+        <div class="see-all">
+            See All >
+        </div>
+
+    </div>
+
+    <div class="movies">
+
+        <div class="movie-card">
+
+            <div class="poster" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80'); background-size: cover; background-position: center;"></div>
+
+            <div class="rating">
+                 8.6/10 Early Ratings
+            </div>
+
+            <div class="movie-name">
+                Kabanda
+            </div>
+
+            <div class="genre">
+                Supernatural / Thriller
+            </div>
+
+        </div>
+
+        <div class="movie-card">
+
+            <div class="poster" style="background-image: url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80'); background-size: cover; background-position: center;"></div>
+
+            <div class="rating">
+                ⭐ 8.6/10 3.3K Votes
+            </div>
+
+            <div class="movie-name">
+                Dhabkaaro
+            </div>
+
+            <div class="genre">
+                Drama
+            </div>
+
+        </div>
+
+        <div class="movie-card">
+
+            <div class="poster" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80'); background-size: cover; background-position: center;"></div>
+
+            <div class="rating">
+                ⭐ 9.4/10 780+ Votes
+            </div>
+
+            <div class="movie-name">
+                Shubh Mangal Dhamal
+            </div>
+
+            <div class="genre">
+                Comedy / Drama / Family
+            </div>
+
+        </div>
+
+        <div class="movie-card">
+
+            <div class="poster" style="background-image: url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80'); background-size: cover; background-position: center;"></div>
+
+            <div class="rating">
+                👍 19.2K+ Likes
+            </div>
+
+            <div class="movie-name">
+                IPL 2026 Final
+            </div>
+
+            <div class="genre">
+                Sports
+            </div>
+
+        </div>
+
+        <div class="movie-card">
+
+            <div class="poster" style="background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80'); background-size: cover; background-position: center;"></div>
+
+            <div class="rating">
+                ⭐ 8.2/10 12.3K Votes
+            </div>
+
+            <div class="movie-name">
+                Chand Mera Dil
+            </div>
+
+            <div class="genre">
+                Drama / Musical / Romantic
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
